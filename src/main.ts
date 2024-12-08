@@ -1,9 +1,10 @@
-import { NestFactory } from '@nestjs/core';
-import { AppModule } from './app.module';
-import { NestExpressApplication } from '@nestjs/platform-express';
-import { WinstonLoggerService } from './logger/winston-logger.service';
-import { ConfigService } from '@nestjs/config';
 import { ValidationPipe } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { NestFactory } from '@nestjs/core';
+import { NestExpressApplication } from '@nestjs/platform-express';
+
+import { AppModule } from './modules/app.module';
+import { WinstonLoggerService } from './modules/logger/winston-logger.service';
 
 /**
  * These are API defaults that can be changed using environment variables,
